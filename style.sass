@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap')
+
+$main-background: hsl(233, 47%, 7%)
+$card-background: hsl(244, 38%, 16%)
+$accent: hsl(277, 64%, 61%)
+
+$main-heading-stats: hsl(0, 0%, 100%)
+$main-paragraph: hsla(0, 0%, 100%, 0.75)
+$stat-headings: hsla(0, 0%, 100%, 0.6)
+
+*, *::before, *::after
+    box-sizing: border-box
+
+body
+    padding: 0
+    margin: 0
+    font-size: 15px
+    height: 100vh
+    background: $main-background
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.container
+    display: flex
+    width: 95%
+    height: 446px
+    margin-bottom: 1rem
+    border-radius: 1rem
+    overflow: hidden
+    background: $card-background
+    cursor: default
+    
+    .body
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .header
+            margin: 5rem 0 2rem 0
+            padding: 0 4rem
+            text-align: center
+            font-family: 'Inter'
+            font-weight: 700
+            font-size: 2rem
+            color: $main-heading-stats
+
+            .accent
+                color: $accent
+
+        .paragraph
+            padding: 0 5rem
+            font-family: 'Inter'
+            font-weight: 700
+            color: $main-paragraph
+            text-align: center
+
+        .stats
+            width: 100%
+            margin: 4rem 0 0 0
+            display: flex
+            justify-content: space-evenly
+            font-family: 'Inter'
+            
+            .number
+                font-size: 2rem
+                font-weight: 700
+                color: $main-heading-stats
+
+            .text
+                color: $main-paragraph
+                text-transform: uppercase
+                font-weight: 600
+    .image-container
+        position: relative
+        .over
+            position: absolute
+            width: 100%
+            height: 100%
+            background: darken($accent, 30%)
+            opacity: .6
+            z-index: 199
+                
+
+
+    
+    
+.attribution 
+    font-size: 1rem
+    text-align: center
+    color: white
+    cursor: default
+
+    a  
+        font-size: 1.2rem
+        color: lighten($accent, 10%)
+        text-decoration: none
+        transition: color 150ms ease-out
+
+        &:hover
+            color: $accent
+
+@media (max-width: 1000px) 
+    .container
+        flex-direction: column-reverse
+        height: 100%
+        .image-container
+            img
+                height: 100%
+                width: 100%
+
+@media (max-width: 600px)
+    .container
+        .stats
+            flex-direction: column
+            align-items: center
+            justify-content: space-between

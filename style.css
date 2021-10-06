@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  height: 100vh;
+  background: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  height: 446px;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #1b1938;
+  cursor: default;
+}
+
+.container .body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .body .header {
+  margin: 5rem 0 2rem 0;
+  padding: 0 4rem;
+  text-align: center;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+}
+
+.container .body .header .accent {
+  color: #aa5cdb;
+}
+
+.container .body .paragraph {
+  padding: 0 5rem;
+  font-family: 'Inter';
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
+.container .body .stats {
+  width: 100%;
+  margin: 4rem 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: 'Inter';
+}
+
+.container .body .stats .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.container .body .stats .text {
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.container .image-container {
+  position: relative;
+}
+
+.container .image-container .over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #5b1c82;
+  opacity: .6;
+  z-index: 199;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  cursor: default;
+}
+
+.attribution a {
+  font-size: 1.2rem;
+  color: #c086e4;
+  text-decoration: none;
+  -webkit-transition: color 150ms ease-out;
+  transition: color 150ms ease-out;
+}
+
+.attribution a:hover {
+  color: #aa5cdb;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: 100%;
+  }
+  .container .image-container img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container .stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=style.css.map */
